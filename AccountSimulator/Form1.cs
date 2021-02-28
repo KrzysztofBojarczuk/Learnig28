@@ -63,5 +63,10 @@ namespace AccountSimulator
         {
             this.Close();
         }
+
+        private void readInputButton_Click(object sender, EventArgs e)
+        {
+            outputLabel.Text = nameTextBox.Text;
+        }
     }
 }

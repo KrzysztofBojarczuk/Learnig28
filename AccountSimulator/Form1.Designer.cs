@@ -39,6 +39,10 @@ namespace AccountSimulator
             this.depositTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.Label = new System.Windows.Forms.Label();
+            this.outputLabel = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.readInputButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // balanceLabel
@@ -130,11 +134,50 @@ namespace AccountSimulator
             this.label5.TabIndex = 9;
             this.label5.Text = "Wpłata na konto";
             // 
+            // Label
+            // 
+            this.Label.AutoSize = true;
+            this.Label.Location = new System.Drawing.Point(27, 78);
+            this.Label.Name = "Label";
+            this.Label.Size = new System.Drawing.Size(109, 13);
+            this.Label.TabIndex = 10;
+            this.Label.Text = "Wpisz imię i nazwisko";
+            // 
+            // outputLabel
+            // 
+            this.outputLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.outputLabel.Location = new System.Drawing.Point(528, 68);
+            this.outputLabel.Name = "outputLabel";
+            this.outputLabel.Size = new System.Drawing.Size(100, 23);
+            this.outputLabel.TabIndex = 11;
+            this.outputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(142, 78);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nameTextBox.TabIndex = 12;
+            // 
+            // readInputButton
+            // 
+            this.readInputButton.Location = new System.Drawing.Point(528, 29);
+            this.readInputButton.Name = "readInputButton";
+            this.readInputButton.Size = new System.Drawing.Size(100, 23);
+            this.readInputButton.TabIndex = 13;
+            this.readInputButton.Text = "Odczytaj dane";
+            this.readInputButton.UseVisualStyleBackColor = true;
+            this.readInputButton.Click += new System.EventHandler(this.readInputButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.readInputButton);
+            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(this.outputLabel);
+            this.Controls.Add(this.Label);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.depositTextBox);
@@ -164,6 +207,10 @@ namespace AccountSimulator
         private System.Windows.Forms.TextBox depositTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Label;
+        private System.Windows.Forms.Label outputLabel;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.Button readInputButton;
     }
 }
 
